@@ -1,0 +1,21 @@
+p#notice
+  = notice
+p
+  strong
+    | Category:
+  = @expense.category
+p
+  strong
+    | Payment:
+  = @expense.payment
+p
+  strong
+    | Value:
+  = @expense.value
+p
+  strong
+    | Detail:
+  = @expense.detail
+= link_to 'Edit', edit_expense_path(@expense)
+|  | 
+= link_to 'Back', expenses_path
