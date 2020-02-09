@@ -14,13 +14,11 @@ and more...
 
 ## 環境構築
 
-### Rails設定
-
 ### DB設定
 
 #### ユーザー作成
-1. psql -d postgres (Postgresに入る)
-2. create role postgres with superuser login password 'postgres';
+1. ```$ psql -d postgres ``` Postgresに入る
+2. ```# create role postgres with superuser login password 'postgres';``` ユーザを作成
 
 ## メモ
 
