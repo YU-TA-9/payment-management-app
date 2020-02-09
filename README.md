@@ -1,28 +1,27 @@
-# README
+# 収支管理WEBアプリ
 
-収支管理WEBアプリ
+START：2019/02/09
 
-FW：Ruby on Rails
+## 開発環境
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Framework : Ruby on Rails
 
-Things you may want to cover:
+* Ruby version : 2.7.0
 
-* Ruby version
+* DB : PostgreSQL
 
-* System dependencies
+and more...
 
-* Configuration
+## 環境構築
 
-* Database creation
+### DB設定
 
-* Database initialization
+#### ユーザー作成
+1. ```$ psql -d postgres ``` Postgresに入る
+2. ```# create role postgres with superuser login password 'postgres';``` ユーザを作成
 
-* How to run the test suite
+## メモ
 
-* Services (job queues, cache servers, search engines, etc.)
+* [AtomのMarkdownプレビュー機能](https://qiita.com/kamorits/items/6f342da395ad57468ae3)
 
-* Deployment instructions
-
-* ...
+* [マークダウン記法一覧](https://qiita.com/kamorits/items/6f342da395ad57468ae3)  
