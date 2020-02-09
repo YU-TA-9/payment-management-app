@@ -55,7 +55,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rails-i18n', '~> 6.0.0'
 
-gem 'html2slim'
+gem 'html2slim' #erb形式をslim形式に変換
+gem 'slim-rails' #Slimのジェネレータを提供
 
 gem 'pg'
 
