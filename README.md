@@ -46,6 +46,15 @@ and more...
 
 ## メモ
 
+* Gitコマンド実行時にPermisson系のエラーが発生した場合
+
+  * ```sudo chown -R ＜PCのログインユーザ名＞ ＜パス＞```
+
+    * ```whoami``` ユーザ名を調べる
+
+
 * [AtomのMarkdownプレビュー機能](https://qiita.com/kamorits/items/6f342da395ad57468ae3)
 
 * [マークダウン記法一覧](https://qiita.com/kamorits/items/6f342da395ad57468ae3)  
+
+* [ファイルパーミッションの変更（chmod）を無視する方法](https://qiita.com/_Keitaro_/items/edf962d00770029cf4ba)
