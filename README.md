@@ -52,6 +52,8 @@ and more...
 
     * ```whoami``` ユーザ名を調べる
 
+  * [参考](https://qiita.com/pugiemonn/items/8d7968f43f3542f9c30b)
+
 
 * [AtomのMarkdownプレビュー機能](https://qiita.com/kamorits/items/6f342da395ad57468ae3)
 
