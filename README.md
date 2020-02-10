@@ -31,7 +31,7 @@ and more...
 
 2. erb形式のファイルをslim形式へ<br> ```bundle exec erb2slim ＜変換したいファイルorディレクトリ＞ --delete```
 
-#### <Bootstrap使用するため＞
+#### ＜Bootstrap使用するため＞
 
 1. Gemfileに以下を追記し、```bundle```コマンド実行
 
@@ -46,14 +46,17 @@ and more...
 
 ## メモ
 
-* Gitコマンド実行時にPermisson系のエラーが発生した場合
+#### ＜Gitコマンド実行時にPermisson系のエラーが発生した場合＞
 
-  * ```sudo chown -R ＜PCのログインユーザ名＞ ＜パス＞```
+```sudo chown -R ＜PCのログインユーザ名＞ ＜パス＞```を実行<br>
+※```whoami``` ユーザ名を調べる<br>
+※[参考](https://qiita.com/pugiemonn/items/8d7968f43f3542f9c30b)
 
-    * ```whoami``` ユーザ名を調べる
+#### ＜PostgreSQL起動＞
 
-  * [参考](https://qiita.com/pugiemonn/items/8d7968f43f3542f9c30b)
+```postgres -D /usr/local/var/postgres```
 
+#### ＜その他リンク＞
 
 * [AtomのMarkdownプレビュー機能](https://qiita.com/kamorits/items/6f342da395ad57468ae3)
 
