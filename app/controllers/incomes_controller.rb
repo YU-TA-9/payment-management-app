@@ -12,4 +12,11 @@ class IncomesController < ApplicationController
 
   def edit
   end
+
+  def create
+    # ↓修正する必要あり
+    @income = Income.new(params[:income])
+    @income.save
+    redirect_to incomes_path
+  end
 end
