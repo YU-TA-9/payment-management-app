@@ -1,3 +1,14 @@
 h1 タスク一覧
+.container
+  table.table-striped border=1
+    tr
+      th テスト
+      th テスト２
+      th テスト３
+    - @incomes.each do |income|
+      tr
+        td.id = income.id
+        td.value = income.value
+        td.detail = income.detail
 
 = link_to '新規登録', new_income_path, class: 'btn btn-primary'
