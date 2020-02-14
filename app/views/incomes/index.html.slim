@@ -1,10 +1,10 @@
 h1 タスク一覧
 .container
-  table.table-striped border=1
+  table.table
     tr
-      th テスト
-      th テスト２
-      th テスト３
+      th ID
+      th 金額
+      th 詳細
     - @incomes.each do |income|
       tr
         td.id = income.id

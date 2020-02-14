@@ -55,6 +55,8 @@ and more...
 #### ＜PostgreSQL起動＞
 
 ```postgres -D /usr/local/var/postgres```
+or
+```brew services start postgresql```
 
 #### ＜その他リンク＞
 
