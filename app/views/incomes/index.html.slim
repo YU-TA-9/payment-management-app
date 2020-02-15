@@ -1,14 +1,21 @@
 h1 タスク一覧
-.container
-  table.table
+
+.mb-3
+table.table.table-hover
+  thead.thead-default
     tr
-      th ID
-      th 金額
-      th 詳細
-    - @incomes.each do |income|
-      tr
-        td.id = income.id
-        td.value = income.value
-        td.detail = income.detail
+      th = Income.human_attribute_name(:id)
+      th = Income.human_attribute_name(:value)
+      th = Income.human_attribute_name(:detail)
+      th
+      th
+    tbody
+      - @incomes.each do |income|
+        tr
+          td = income.id
+          td = income.value
+          td = income.detail
+          td = link_to '編集', edit_income_path(income),class: 'btn btn-danger mr-3'
+          td = link_to '削除', income, method: :delete, data:{confirm: "収入ID「#{income.id}」を削除します。よろしいですか？"},class:'btn btn-danger'
 
 = link_to '新規登録', new_income_path, class: 'btn btn-primary'
