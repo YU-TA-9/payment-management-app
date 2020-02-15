@@ -7,6 +7,19 @@ ja:
         restrict_dependent_destroy:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
+    # モデル名
+    models:
+      income: 収入
+    # モデルごとのアトリビュート名
+    attributes:
+      income:
+        id: ID
+        value: 金額
+        detail: 内容
+  # 全モデル共通のアトリビュート名
+  attributes:
+    created_at: 作成日時
+    updated_at: 更新日時
   date:
     abbr_day_names:
     - 日

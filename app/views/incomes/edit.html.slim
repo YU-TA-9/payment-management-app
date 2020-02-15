@@ -1,4 +1,6 @@
-h1
-  | Incomes#edit
-p
-  | Find me in app/views/incomes/edit.html.erb
+h1  収入内容編集
+
+.nav.justify-content-end
+  = link_to '収入一覧', incomes_path, class: 'nav-link'
+
+= render partial: 'form', locals:{income: @income}
