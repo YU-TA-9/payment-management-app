@@ -1,35 +1,27 @@
-p#notice
-  = notice
-h1
-  | Expenses
-table
-  thead
+h1 支出一覧
+
+.mb-3
+table.table.table-hover
+  thead.thead-default
     tr
+      th = Expense.human_attribute_name(:id)
+      th = Expense.human_attribute_name(:value)
+      th = Expense.human_attribute_name(:category)
+      th = Expense.human_attribute_name(:payment)
+      th = Expense.human_attribute_name(:detail)
       th
-        | Category
       th
-        | Payment
-      th
-        | Value
-      th
-        | Detail
-      th[colspan="3"]
-  tbody
-    - @expenses.each do |expense|
-      tr
-        td
-          = expense.category
-        td
-          = expense.payment
-        td
-          = expense.value
-        td
-          = expense.detail
-        td
-          = link_to 'Show', expense
-        td
-          = link_to 'Edit', edit_expense_path(expense)
-        td
-          = link_to 'Destroy', expense, method: :delete, data: { confirm: 'Are you sure?' }
-br
-= link_to 'New Expense', new_expense_path
+    tbody
+      - @expenses.each do |expense|
+        tr
+          td = expense.id
+          td = expense.value
+          td = expense.category
+          td = expense.payment
+          td = expense.detail
+          td = link_to '編集', edit_expense_path(expense),class: 'btn btn-danger mr-3'
+          td = link_to '削除', expense, method: :delete, data:{confirm: "支出ID「#{expense.id}」を削除します。よろしいですか？"},class:'btn btn-danger'
+
+= link_to '新規登録', new_expense_path, class: 'btn btn-primary'
+
+= link_to '支出登録（仮）', new_expense_path, class: 'btn btn-warning'

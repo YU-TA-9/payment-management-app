@@ -9,6 +9,7 @@ ja:
           has_many: "%{record}が存在しているので削除できません"
     # モデル名
     models:
+      expense: 支出
       income: 収入
     # モデルごとのアトリビュート名
     attributes:
@@ -16,6 +17,12 @@ ja:
         id: ID
         value: 金額
         detail: 内容
+      expense:
+        id: ID
+        value: 金額
+        detail: 内容
+        category: カテゴリ
+        payment: 支払い種別
   # 全モデル共通のアトリビュート名
   attributes:
     created_at: 作成日時

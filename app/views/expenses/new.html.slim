@@ -1,4 +1,8 @@
-h1
-  | New Expense
-= render 'form', expense: @expense
-= link_to 'Back', expenses_path
+h1 支出登録
+
+.nav.justify-content-end
+  = link_to '支出一覧', expenses_path, class: 'nav-link'
+  = link_to '収入一覧', incomes_path, class: 'nav-link'
+
+
+= render partial: 'form', locals:{expense: @expense}

@@ -1,4 +1,4 @@
-h1 タスク一覧
+h1 収入一覧
 
 .mb-3
 table.table.table-hover
@@ -19,3 +19,5 @@ table.table.table-hover
           td = link_to '削除', income, method: :delete, data:{confirm: "収入ID「#{income.id}」を削除します。よろしいですか？"},class:'btn btn-danger'
 
 = link_to '新規登録', new_income_path, class: 'btn btn-primary'
+
+= link_to '支出登録（仮）', new_expense_path, class: 'btn btn-warning'
