@@ -4,7 +4,15 @@ class ExpensesController < ApplicationController
   # GET /expenses
   # GET /expenses.json
   def index
-    @expenses = Expense.all
+    #@expenses = Expense.all
+    @q = Expense.ransack(params[:q])
+    @expenses = @q.result(distinct: true)
+    @sum = 0
+    #合計算出
+    @expenses.each do |expense|
+      @sum += expense.value
+    end
+
   end
 
   # GET /expenses/1
@@ -43,7 +51,7 @@ end
   def destroy
     expense = Expense.find(params[:id])
     expense.destroy
-    redirect_to expenses_url, notice: "支出ID「#{expense.id}}」を削除しました。"
+    redirect_to expenses_url, notice: "支出ID「#{expense.id}」を削除しました。"
   end
 
   private

@@ -61,3 +61,5 @@ gem 'slim-rails' #Slimのジェネレータを提供
 gem 'pg'
 
 gem 'bootstrap'
+
+gem 'ransack' #表の検索やソート機能
