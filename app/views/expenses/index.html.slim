@@ -5,10 +5,11 @@ table.table.table-hover
   thead.thead-default
     tr
       th = Expense.human_attribute_name(:id)
-      th = Expense.human_attribute_name(:value)
-      th = Expense.human_attribute_name(:category)
-      th = Expense.human_attribute_name(:payment)
+      th = sort_link(@q, :value, default_order: :desc)
+      th = sort_link(@q, :category, default_order: :desc)
+      th = sort_link(@q, :payment, default_order: :desc)
       th = Expense.human_attribute_name(:detail)
+      th = sort_link(@q, :created_at, default_order: :desc)
       th
       th
     tbody
@@ -19,8 +20,16 @@ table.table.table-hover
           td = expense.category
           td = expense.payment
           td = expense.detail
+          td = l expense.created_at, format: :short
           td = link_to '編集', edit_expense_path(expense),class: 'btn btn-danger mr-3'
           td = link_to '削除', expense, method: :delete, data:{confirm: "支出ID「#{expense.id}」を削除します。よろしいですか？"},class:'btn btn-danger'
+
+table.table.table-bordered
+  thead.thead-default
+    tr
+      th
+        span.float-right 合計
+      td = @sum
 
 = link_to '新規登録', new_expense_path, class: 'btn btn-primary'
 

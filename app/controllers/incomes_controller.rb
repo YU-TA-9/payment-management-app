@@ -29,7 +29,7 @@ class IncomesController < ApplicationController
   def destroy
     income = Income.find(params[:id])
     income.destroy
-    redirect_to incomes_url, notice: "収入ID「#{income.id}}」を削除しました。"
+    redirect_to incomes_url, notice: "収入ID「#{income.id}」を削除しました。"
   end
 
   private
