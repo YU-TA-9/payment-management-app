@@ -1,6 +1,12 @@
 class IncomesController < ApplicationController
   def index
-    @incomes = Income.all
+    @q = Income.ransack(params[:q])
+    @incomes = @q.result(distinct: true)
+    @sum = 0
+    #合計算出
+    @incomes.each do |income|
+      @sum += income.value
+    end
   end
 
   def show
