@@ -5,8 +5,9 @@ table.table.table-hover
   thead.thead-default
     tr
       th = Income.human_attribute_name(:id)
-      th = Income.human_attribute_name(:value)
+      th = sort_link(@q, :value, default_order: :desc)
       th = Income.human_attribute_name(:detail)
+      th = sort_link(@q, :created_at, default_order: :desc)
       th
       th
     tbody
@@ -15,9 +16,15 @@ table.table.table-hover
           td = income.id
           td = income.value
           td = income.detail
+          td = l income.created_at, format: :short
           td = link_to '編集', edit_income_path(income),class: 'btn btn-danger mr-3'
           td = link_to '削除', income, method: :delete, data:{confirm: "収入ID「#{income.id}」を削除します。よろしいですか？"},class:'btn btn-danger'
 
-= link_to '新規登録', new_income_path, class: 'btn btn-primary'
+table.table.table-bordered
+  thead.thead-default
+    tr
+      th
+        span.float-right 合計
+      td = @sum
 
-= link_to '支出登録（仮）', new_expense_path, class: 'btn btn-warning'
+= link_to '新規登録', new_income_path, class: 'btn btn-primary'

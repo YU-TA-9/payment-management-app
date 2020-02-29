@@ -11,6 +11,9 @@ html
     .app-title.navbar.navbar-expand-md.navbar-light.bg-light
       .navbar-brand 収支管理アプリ
     .container
+      .nav.justify-content-end
+        = link_to '支出一覧', expenses_path, class: 'nav-link'
+        = link_to '収入一覧', incomes_path, class: 'nav-link'
       - if flash.notice.present?
         .alert.alert-success = flash.notice
       = yield
