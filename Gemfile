@@ -63,3 +63,5 @@ gem 'slim-rails' #Slimのジェネレータを提供
 gem 'bootstrap'
 
 gem 'ransack' #表の検索やソート機能
+
+gem 'therubyracer' #JavaScript実行環境
