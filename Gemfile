@@ -58,7 +58,7 @@ gem 'rails-i18n', '~> 6.0.0'
 gem 'html2slim' #erb形式をslim形式に変換
 gem 'slim-rails' #Slimのジェネレータを提供
 
-gem 'pg'
+gem 'pg' #PostgreSQL専用の設定なので今は除外
 
 gem 'bootstrap'
 
