@@ -65,3 +65,7 @@ gem 'bootstrap'
 gem 'ransack' #表の検索やソート機能
 
 gem 'therubyracer' #JavaScript実行環境
+
+group :production, :staging do
+    gem 'unicorn'
+end
