@@ -64,8 +64,8 @@ gem 'bootstrap'
 
 gem 'ransack' #表の検索やソート機能
 
-gem 'therubyracer' #JavaScript実行環境
+gem 'therubyracer' if RUBY_PLATFORM.match(/linux/) #JavaScript実行環境
 
 group :production, :staging do
-    gem 'unicorn'
+    gem 'unicorn' gem 'therubyracer' if RUBY_PLATFORM.match(/linux/)
 end
